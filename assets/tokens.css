@@ -1,0 +1,203 @@
+/* Навигатор Тенно — generated from tokens.json */
+/* Источник: design-tokens.json. Не редактировать вручную: python3 tools/build.py */
+:root, [data-theme="dark"] {
+  --tn-color-base-graphite-1000: #04070b;
+  --tn-color-base-graphite-950: #080c12;
+  --tn-color-base-graphite-900: #0c1118;
+  --tn-color-base-graphite-850: #111720;
+  --tn-color-base-graphite-800: #161d27;
+  --tn-color-base-graphite-750: #1c2430;
+  --tn-color-base-graphite-700: #28323f;
+  --tn-color-base-graphite-600: #36424f;
+  --tn-color-base-graphite-500: #55616f;
+  --tn-color-base-graphite-400: #7b8796;
+  --tn-color-base-graphite-300: #98a4b3;
+  --tn-color-base-graphite-200: #bcc5d0;
+  --tn-color-base-graphite-100: #dbe1e8;
+  --tn-color-base-graphite-50: #f1f4f7;
+  --tn-color-base-cyan-900: #082a32;
+  --tn-color-base-cyan-800: #0b3c47;
+  --tn-color-base-cyan-600: #16778a;
+  --tn-color-base-cyan-500: #2a9fb4;
+  --tn-color-base-cyan-400: #4cc3d6;
+  --tn-color-base-cyan-300: #7dd8e6;
+  --tn-color-base-cyan-200: #b0e9f1;
+  --tn-color-base-cyan-glow: rgba(76, 195, 214, 0.35);
+  --tn-color-base-gold-800: #2e2410;
+  --tn-color-base-gold-500: #b38c3e;
+  --tn-color-base-gold-400: #d6b064;
+  --tn-color-base-gold-300: #e8cc94;
+  --tn-color-base-gold-glow: rgba(214, 176, 100, 0.30);
+  --tn-color-base-green-800: #10301f;
+  --tn-color-base-green-400: #5fc58d;
+  --tn-color-base-green-300: #8fdcb1;
+  --tn-color-base-amber-800: #33240c;
+  --tn-color-base-amber-400: #efb456;
+  --tn-color-base-amber-300: #f6cf8e;
+  --tn-color-base-coral-800: #3a1714;
+  --tn-color-base-coral-400: #f2806f;
+  --tn-color-base-coral-300: #f8aca1;
+  --tn-color-base-rarity-common: #cf9d72;
+  --tn-color-base-rarity-uncommon: #c7d0da;
+  --tn-color-base-rarity-rare: #e8cc94;
+  --tn-color-base-rarity-legendary: #d9d0ff;
+  --tn-color-base-scrim: rgba(2, 4, 8, 0.72);
+  --tn-color-bg-canvas: var(--tn-color-base-graphite-950);
+  --tn-color-bg-map: var(--tn-color-base-graphite-1000);
+  --tn-color-surface-primary: var(--tn-color-base-graphite-900);
+  --tn-color-surface-secondary: var(--tn-color-base-graphite-850);
+  --tn-color-surface-raised: var(--tn-color-base-graphite-800);
+  --tn-color-surface-overlay: var(--tn-color-base-graphite-750);
+  --tn-color-surface-inset: var(--tn-color-base-graphite-950);
+  --tn-color-surface-selected: var(--tn-color-base-cyan-900);
+  --tn-color-surface-scrim: var(--tn-color-base-scrim);
+  --tn-color-text-primary: var(--tn-color-base-graphite-50);
+  --tn-color-text-secondary: var(--tn-color-base-graphite-200);
+  --tn-color-text-tertiary: var(--tn-color-base-graphite-300);
+  --tn-color-text-disabled: var(--tn-color-base-graphite-400);
+  --tn-color-text-on-accent: var(--tn-color-base-graphite-1000);
+  --tn-color-text-link: var(--tn-color-base-cyan-300);
+  --tn-color-text-link-hover: var(--tn-color-base-cyan-200);
+  --tn-color-text-accent: var(--tn-color-base-cyan-300);
+  --tn-color-text-gold: var(--tn-color-base-gold-300);
+  --tn-color-border-subtle: var(--tn-color-base-graphite-700);
+  --tn-color-border-control: var(--tn-color-base-graphite-400);
+  --tn-color-border-strong: var(--tn-color-base-graphite-300);
+  --tn-color-border-accent: var(--tn-color-base-cyan-400);
+  --tn-color-accent-primary: var(--tn-color-base-cyan-400);
+  --tn-color-accent-hover: var(--tn-color-base-cyan-300);
+  --tn-color-accent-pressed: var(--tn-color-base-cyan-500);
+  --tn-color-accent-subtle: var(--tn-color-base-cyan-800);
+  --tn-color-accent-glow: var(--tn-color-base-cyan-glow);
+  --tn-color-accent-gold: var(--tn-color-base-gold-400);
+  --tn-color-accent-gold-subtle: var(--tn-color-base-gold-800);
+  --tn-color-focus-ring: var(--tn-color-base-graphite-50);
+  --tn-color-focus-gap: var(--tn-color-base-graphite-1000);
+  --tn-color-status-success: var(--tn-color-base-green-300);
+  --tn-color-status-success-subtle: var(--tn-color-base-green-800);
+  --tn-color-status-warning: var(--tn-color-base-amber-300);
+  --tn-color-status-warning-subtle: var(--tn-color-base-amber-800);
+  --tn-color-status-danger: var(--tn-color-base-coral-300);
+  --tn-color-status-danger-border: var(--tn-color-base-coral-400);
+  --tn-color-status-danger-subtle: var(--tn-color-base-coral-800);
+  --tn-color-status-info: var(--tn-color-base-cyan-300);
+  --tn-color-status-info-subtle: var(--tn-color-base-cyan-800);
+  --tn-color-disabled-bg: var(--tn-color-base-graphite-800);
+  --tn-color-disabled-fg: var(--tn-color-base-graphite-400);
+  --tn-color-progress-locked: var(--tn-color-base-graphite-300);
+  --tn-color-progress-available: var(--tn-color-base-cyan-300);
+  --tn-color-progress-current: var(--tn-color-base-cyan-400);
+  --tn-color-progress-done: var(--tn-color-base-green-400);
+  --tn-color-route-required: var(--tn-color-base-cyan-400);
+  --tn-color-route-optional: var(--tn-color-base-gold-400);
+  --tn-color-route-done: var(--tn-color-base-green-400);
+  --tn-color-route-inactive: var(--tn-color-base-graphite-500);
+  --tn-color-route-orbit: var(--tn-color-base-graphite-700);
+  --tn-color-rarity-common: var(--tn-color-base-rarity-common);
+  --tn-color-rarity-uncommon: var(--tn-color-base-rarity-uncommon);
+  --tn-color-rarity-rare: var(--tn-color-base-rarity-rare);
+  --tn-color-rarity-legendary: var(--tn-color-base-rarity-legendary);
+  --tn-color-relation-allied: var(--tn-color-base-green-300);
+  --tn-color-relation-opposed: var(--tn-color-base-amber-300);
+  --tn-color-relation-enemy: var(--tn-color-base-coral-300);
+  --tn-color-relation-neutral: var(--tn-color-base-graphite-200);
+  --tn-color-button-primary-bg: var(--tn-color-accent-primary);
+  --tn-color-button-primary-fg: var(--tn-color-text-on-accent);
+  --tn-color-button-secondary-bg: var(--tn-color-surface-secondary);
+  --tn-color-button-secondary-border: var(--tn-color-border-control);
+  --tn-color-card-bg: var(--tn-color-surface-secondary);
+  --tn-color-card-border: var(--tn-color-border-subtle);
+  --tn-color-map-node-ring: var(--tn-color-base-graphite-300);
+  --tn-color-map-label-bg: var(--tn-color-base-graphite-950);
+  --tn-shadow-raised: 0 4px 16px rgba(0, 0, 0, 0.45);
+  --tn-shadow-overlay: 0 24px 64px rgba(0, 0, 0, 0.6);
+  --tn-shadow-glow-accent: 0 0 0 1px rgba(76, 195, 214, 0.55), 0 0 20px rgba(76, 195, 214, 0.35);
+  --tn-shadow-glow-gold: 0 0 0 1px rgba(214, 176, 100, 0.5), 0 0 18px rgba(214, 176, 100, 0.3);
+  --tn-shadow-focus: 0 0 0 2px #04070b, 0 0 0 4px #f1f4f7;
+}
+:root {
+  --tn-space-0: 0px;
+  --tn-space-half: 2px;
+  --tn-space-1: 4px;
+  --tn-space-2: 8px;
+  --tn-space-3: 12px;
+  --tn-space-4: 16px;
+  --tn-space-5: 20px;
+  --tn-space-6: 24px;
+  --tn-space-8: 32px;
+  --tn-space-10: 40px;
+  --tn-space-12: 48px;
+  --tn-space-16: 64px;
+  --tn-radius-none: 0px;
+  --tn-radius-xs: 2px;
+  --tn-radius-sm: 4px;
+  --tn-radius-md: 6px;
+  --tn-radius-lg: 10px;
+  --tn-radius-pill: 999px;
+  --tn-border-width-hairline: 1px;
+  --tn-border-width-thick: 2px;
+  --tn-border-width-focus: 2px;
+  --tn-border-width-focus-offset: 2px;
+  --tn-size-control-sm: 36px;
+  --tn-size-control-md: 44px;
+  --tn-size-control-lg: 52px;
+  --tn-size-target-min: 44px;
+  --tn-size-icon-sm: 16px;
+  --tn-size-icon-md: 20px;
+  --tn-size-icon-lg: 24px;
+  --tn-size-header: 64px;
+  --tn-size-header-compact: 56px;
+  --tn-size-tabbar: 64px;
+  --tn-size-content-max: 1360px;
+  --tn-size-reading: 720px;
+  --tn-size-sidebar: 264px;
+  --tn-size-panel: 400px;
+  --tn-size-row: 48px;
+  --tn-size-row-compact: 36px;
+  --tn-size-planet-sm: 40px;
+  --tn-size-planet-md: 64px;
+  --tn-size-planet-lg: 120px;
+  --tn-size-node: 28px;
+  --tn-z-index-base: 0;
+  --tn-z-index-sticky: 100;
+  --tn-z-index-header: 200;
+  --tn-z-index-drawer: 300;
+  --tn-z-index-popover: 400;
+  --tn-z-index-dialog: 600;
+  --tn-z-index-toast: 700;
+  --tn-z-index-tooltip: 800;
+  --tn-duration-instant: 0ms;
+  --tn-duration-fast: 120ms;
+  --tn-duration-base: 200ms;
+  --tn-duration-slow: 320ms;
+  --tn-duration-map: 560ms;
+  --tn-easing-standard: cubic-bezier(0.2, 0, 0, 1);
+  --tn-easing-enter: cubic-bezier(0, 0, 0.2, 1);
+  --tn-easing-exit: cubic-bezier(0.4, 0, 1, 1);
+  --tn-easing-map: cubic-bezier(0.65, 0, 0.35, 1);
+  --tn-breakpoint-min: 360px;
+  --tn-breakpoint-medium: 640px;
+  --tn-breakpoint-wide: 1100px;
+  --tn-breakpoint-xwide: 1360px;
+  --font-display: "Exo 2", "IBM Plex Sans", "Segoe UI", Arial, sans-serif;
+  --tn-font-display: var(--font-display);
+  --font-body: "IBM Plex Sans", "Segoe UI", Roboto, Arial, sans-serif;
+  --tn-font-body: var(--font-body);
+  --font-mono: "IBM Plex Mono", Consolas, Menlo, monospace;
+  --tn-font-mono: var(--font-mono);
+}
+.tn-text-display { font-family: var(--font-display); font-size: 44px; line-height: 52px; font-weight: 600; letter-spacing: -0.01em; }
+.tn-text-display-compact { font-family: var(--font-display); font-size: 30px; line-height: 36px; font-weight: 600; letter-spacing: 0; }
+.tn-text-h1 { font-family: var(--font-display); font-size: 32px; line-height: 40px; font-weight: 600; letter-spacing: 0; }
+.tn-text-h1-compact { font-family: var(--font-display); font-size: 26px; line-height: 32px; font-weight: 600; letter-spacing: 0; }
+.tn-text-h2 { font-family: var(--font-display); font-size: 24px; line-height: 32px; font-weight: 600; letter-spacing: 0; }
+.tn-text-h3 { font-family: var(--font-display); font-size: 19px; line-height: 26px; font-weight: 600; letter-spacing: 0; }
+.tn-text-overline { font-family: var(--font-display); font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.08em; }
+.tn-text-body-lg { font-family: var(--font-body); font-size: 17px; line-height: 28px; font-weight: 400; letter-spacing: 0; }
+.tn-text-body { font-family: var(--font-body); font-size: 15px; line-height: 24px; font-weight: 400; letter-spacing: 0; }
+.tn-text-body-strong { font-family: var(--font-body); font-size: 15px; line-height: 24px; font-weight: 600; letter-spacing: 0; }
+.tn-text-item-name { font-family: var(--font-body); font-size: 16px; line-height: 22px; font-weight: 600; letter-spacing: 0; }
+.tn-text-label { font-family: var(--font-body); font-size: 14px; line-height: 20px; font-weight: 500; letter-spacing: 0; }
+.tn-text-caption { font-family: var(--font-body); font-size: 13px; line-height: 18px; font-weight: 400; letter-spacing: 0; }
+.tn-text-data { font-family: var(--font-mono); font-size: 14px; line-height: 20px; font-weight: 500; letter-spacing: 0; }
+.tn-text-data-lg { font-family: var(--font-mono); font-size: 22px; line-height: 28px; font-weight: 500; letter-spacing: 0; }

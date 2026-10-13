@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ru" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Навигатор Тенно</title>
+<meta name="description" content="Русскоязычный помощник по Warframe: маршрут развития по гайду, условия доступа, сборки, моды, синдикаты, добыча и личные задачи.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d6b064' stroke-width='1.5' stroke-linejoin='round'%3E%3Cpath d='M12 2.5 15 8l-3 3-3-3zM12 21.5 9 16l3-3 3 3zM2.5 12 8 9l3 3-3 3zM21.5 12 16 15l-3-3 3-3z'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/bundle.css">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+<div class="tn-app" id="app">
+  <div id="tn-header"></div>
+  <div id="tn-banner"></div>
+  <main id="main" tabindex="-1"><noscript><div class="tn-container" style="padding:48px 0"><p>Для работы навигатора нужен JavaScript.</p></div></noscript></main>
+  <div id="tn-tabbar"></div>
+</div>
+<div class="tn-app tn-overlay-root">
+  <div id="tn-menu-host"></div>
+  <div id="tn-overlays"></div>
+  <div class="tn-toasts" id="tn-toasts" role="region" aria-label="Уведомления"></div>
+</div>
+<div id="tn-live" class="tn-sr-only" aria-live="polite"></div>
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

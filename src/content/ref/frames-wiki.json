@@ -1,0 +1,1225 @@
+{
+"_source": "Warframe Wiki: Module:Warframes/data (полярности, аура, экзилус, характеристики, способности), страницы варфреймов (раздел Acquisition), межъязыковые ссылки на ru.wiki (русские названия); WFCD warframe-items (цены чертежей в Магазине). Выгрузка 13.10.2026. Русские названия способностей — таблицы «Способности» на страницах ru.wiki (13.10.2026).",
+"frames": [
+{
+"n": "Excalibur",
+"ru": "Экскалибур",
+"aura": null,
+"pol": [
+"Vazarin",
+"Madurai"
+],
+"ex": null,
+"hp": 270,
+"sh": 270,
+"ar": 240,
+"en": 100,
+"abEn": [
+"Slash Dash",
+"Radial Blind",
+"Radial Javelin",
+"Exalted Blade"
+],
+"ab": [
+"Рассекающий Рывок",
+"Ослепляющий Свет",
+"Сияющее Копьё",
+"Величественный Клинок"
+],
+"play": [
+"Damage"
+],
+"aug": [
+"Arbiters of Hexis",
+"Steel Meridian"
+],
+"prime": {
+"aura": "Madurai",
+"pol": [
+"Vazarin",
+"Madurai",
+"Madurai"
+],
+"ex": null,
+"hp": 270,
+"sh": 270,
+"ar": 315,
+"en": 175,
+"vaulted": "N/A"
+},
+"bp": 35000,
+"plat": 75
+},
+{
+"n": "Mag",
+"ru": "Мэг",
+"aura": "Madurai",
+"pol": [
+"Naramon",
+"Naramon"
+],
+"ex": null,
+"hp": 180,
+"sh": 455,
+"ar": 105,
+"en": 140,
+"abEn": [
+"Pull",
+"Magnetize",
+"Polarize",
+"Crush"
+],
+"ab": [
+"Притяжение",
+"Намагничивание",
+"Поляризация Щита",
+"Сокрушение"
+],
+"play": [
+"Crowd Control"
+],
+"aug": [
+"New Loka",
+"The Perrin Sequence"
+],
+"prime": {
+"aura": "Madurai",
+"pol": [
+"Naramon",
+"Naramon",
+"Madurai"
+],
+"ex": null,
+"hp": 270,
+"sh": 455,
+"ar": 135,
+"en": 215,
+"vaulted": true
+},
+"bp": 25000,
+"plat": 75
+},
+{
+"n": "Volt",
+"ru": "Вольт",
+"aura": "Madurai",
+"pol": [
+"Naramon",
+"Madurai"
+],
+"ex": null,
+"hp": 270,
+"sh": 455,
+"ar": 105,
+"en": 100,
+"abEn": [
+"Shock",
+"Speed",
+"Electric Shield",
+"Discharge"
+],
+"ab": [
+"Шок",
+"Ускорение",
+"Электрический Щит",
+"Разрядка"
+],
+"play": [
+"Damage"
+],
+"aug": [
+"Arbiters of Hexis",
+"Red Veil"
+],
+"prime": {
+"aura": "Madurai",
+"pol": [
+"Naramon",
+"Madurai",
+"Madurai"
+],
+"ex": null,
+"hp": 270,
+"sh": 455,
+"ar": 135,
+"en": 200,
+"vaulted": true
+},
+"bp": null,
+"plat": 75
+},
+{
+"n": "Rhino",
+"ru": "Рино",
+"aura": "Madurai",
+"pol": [
+"Vazarin",
+"Vazarin"
+],
+"ex": null,
+"hp": 270,
+"sh": 455,
+"ar": 240,
+"en": 100,
+"abEn": [
+"Rhino Charge",
+"Iron Skin",
+"Roar",
+"Rhino Stomp"
+],
+"ab": [
+"Рывок Рино",
+"Железная Кожа",
+"Рёв",
+"Топот Рино"
+],
+"play": [
+"Survival",
+"Crowd Control"
+],
+"aug": [
+"Steel Meridian",
+"The Perrin Sequence"
+],
+"prime": {
+"aura": "Madurai",
+"pol": [
+"Vazarin",
+"Vazarin",
+"Naramon"
+],
+"ex": null,
+"hp": 270,
+"sh": 455,
+"ar": 290,
+"en": 100,
+"vaulted": true
+},
+"bp": 35000,
+"plat": 375
+},
+{
+"n": "Loki",
+"ru": "Локи",
+"aura": "Naramon",
+"pol": [
+"Vazarin",
+"Madurai"
+],
+"ex": null,
+"hp": 180,
+"sh": 180,
+"ar": 105,
+"en": 175,
+"abEn": [
+"Decoy",
+"Invisibility",
+"Switch Teleport",
+"Radial Disarm"
+],
+"ab": [
+"Приманка",
+"Невидимость",
+"Транспозиция",
+"Обезоруживающее Излучение"
+],
+"play": [
+"Stealth"
+],
+"aug": [
+"Arbiters of Hexis",
+"Red Veil"
+],
+"prime": {
+"aura": "Naramon",
+"pol": [
+"Vazarin",
+"Vazarin",
+"Madurai",
+"Naramon"
+],
+"ex": null,
+"hp": 180,
+"sh": 180,
+"ar": 135,
+"en": 215,
+"vaulted": true
+},
+"bp": 35000,
+"plat": 175
+},
+{
+"n": "Frost",
+"ru": "Фрост",
+"aura": "Vazarin",
+"pol": [
+"Naramon",
+"Vazarin"
+],
+"ex": null,
+"hp": 270,
+"sh": 455,
+"ar": 315,
+"en": 100,
+"abEn": [
+"Freeze",
+"Ice Wave",
+"Snow Globe",
+"Avalanche"
+],
+"ab": [
+"Заморозка",
+"Ледяная Волна",
+"Снежная Сфера",
+"Лавина"
+],
+"play": [
+"Crowd Control",
+"Survival"
+],
+"aug": [
+"Cephalon Suda",
+"Steel Meridian"
+],
+"prime": {
+"aura": "Vazarin",
+"pol": [
+"Naramon",
+"Vazarin",
+"Vazarin"
+],
+"ex": null,
+"hp": 270,
+"sh": 550,
+"ar": 315,
+"en": 100,
+"vaulted": true
+},
+"bp": 25000,
+"plat": 375
+},
+{
+"n": "Nekros",
+"ru": "Некрос",
+"aura": null,
+"pol": [
+"Vazarin",
+"Madurai"
+],
+"ex": null,
+"hp": 270,
+"sh": 235,
+"ar": 105,
+"en": 100,
+"abEn": [
+"Soul Punch",
+"Terrify",
+"Desecrate",
+"Shadows of the Dead"
+],
+"ab": [
+"Удар Души",
+"Устрашение",
+"Осквернение",
+"Тени Мёртвых"
+],
+"play": [
+"Crowd Control"
+],
+"aug": [
+"Red Veil",
+"The Perrin Sequence"
+],
+"prime": {
+"aura": null,
+"pol": [
+"Madurai",
+"Vazarin",
+"Naramon"
+],
+"ex": null,
+"hp": 270,
+"sh": 455,
+"ar": 135,
+"en": 140,
+"vaulted": true
+},
+"bp": 100000,
+"plat": 375
+},
+{
+"n": "Nezha",
+"ru": "Нэчжа",
+"aura": "Naramon",
+"pol": [
+"Vazarin",
+"Madurai"
+],
+"ex": null,
+"hp": 365,
+"sh": 135,
+"ar": 200,
+"en": 175,
+"abEn": [
+"Fire Walker",
+"Blazing Chakram",
+"Warding Halo",
+"Divine Spears"
+],
+"ab": [
+"Идущий В Огне",
+"Пылающий Чакрам",
+"Оберегающее Гало",
+"Божественные Копья"
+],
+"play": [
+"Survival",
+"Crowd Control"
+],
+"aug": [
+"Cephalon Suda",
+"Steel Meridian"
+],
+"prime": {
+"aura": "Naramon",
+"pol": [
+"Vazarin",
+"Madurai",
+"Naramon"
+],
+"ex": null,
+"hp": 365,
+"sh": 135,
+"ar": 265,
+"en": 175,
+"vaulted": true
+},
+"bp": null,
+"plat": 275
+},
+{
+"n": "Inaros",
+"ru": "Инарос",
+"aura": "Naramon",
+"pol": [
+"Vazarin",
+"Vazarin"
+],
+"ex": "Naramon",
+"hp": 2110,
+"sh": 0,
+"ar": 240,
+"en": 100,
+"abEn": [
+"Desiccation",
+"Sandstorm",
+"Scarab Shell",
+"Scarab Swarm"
+],
+"ab": [
+"Суховей",
+"Песчаная Буря",
+"Панцирь Скарабея",
+"Рой Скарабеев"
+],
+"play": [
+"Survival",
+"Crowd Control"
+],
+"aug": [
+"Arbiters of Hexis",
+"The Perrin Sequence"
+],
+"prime": {
+"aura": "Naramon",
+"pol": [
+"Madurai",
+"Vazarin",
+"Vazarin"
+],
+"ex": "Naramon",
+"hp": 2215,
+"sh": 0,
+"ar": 240,
+"en": 140,
+"vaulted": true
+},
+"bp": null,
+"plat": 225
+},
+{
+"n": "Nidus",
+"ru": "Нидус",
+"aura": "Madurai",
+"pol": [
+"Madurai",
+"Vazarin"
+],
+"ex": null,
+"hp": 675,
+"sh": 0,
+"ar": 350,
+"en": 100,
+"abEn": [
+"Virulence",
+"Larva",
+"Parasitic Link",
+"Ravenous"
+],
+"ab": [
+"Зараза",
+"Личинка",
+"Паразитическая Связь",
+"Голод"
+],
+"play": [
+"Damage",
+"Survival",
+"Crowd Control"
+],
+"aug": [
+"Steel Meridian",
+"The Perrin Sequence"
+],
+"prime": {
+"aura": "Madurai",
+"pol": [
+"Madurai",
+"Naramon",
+"Vazarin"
+],
+"ex": null,
+"hp": 825,
+"sh": 0,
+"ar": 425,
+"en": 140,
+"vaulted": true
+},
+"bp": null,
+"plat": 225
+},
+{
+"n": "Mesa",
+"ru": "Миса",
+"aura": "Madurai",
+"pol": [
+"Naramon",
+"Naramon"
+],
+"ex": null,
+"hp": 365,
+"sh": 180,
+"ar": 105,
+"en": 100,
+"abEn": [
+"Ballistic Battery",
+"Shooting Gallery",
+"Shatter Shield",
+"Peacemaker"
+],
+"ab": [
+"Баллистическая Батарея",
+"Тир",
+"Осколочный Щит",
+"Миротворец"
+],
+"play": [
+"Damage"
+],
+"aug": [
+"Red Veil",
+"Steel Meridian"
+],
+"prime": {
+"aura": "Madurai",
+"pol": [
+"Naramon",
+"Naramon",
+"Vazarin",
+"Madurai"
+],
+"ex": null,
+"hp": 400,
+"sh": 180,
+"ar": 135,
+"en": 140,
+"vaulted": true
+},
+"bp": 30000,
+"plat": 325
+},
+{
+"n": "Saryn",
+"ru": "Сарина",
+"aura": "Vazarin",
+"pol": [
+"Naramon",
+"Vazarin"
+],
+"ex": null,
+"hp": 365,
+"sh": 270,
+"ar": 240,
+"en": 175,
+"abEn": [
+"Spores",
+"Molt",
+"Toxic Lash",
+"Miasma"
+],
+"ab": [
+"Споры",
+"Линька",
+"Токсичный Хлыст",
+"Миазма"
+],
+"play": [
+"Damage"
+],
+"aug": [
+"Red Veil",
+"Steel Meridian"
+],
+"prime": {
+"aura": "Vazarin",
+"pol": [
+"Naramon",
+"Vazarin",
+"Madurai"
+],
+"ex": null,
+"hp": 365,
+"sh": 270,
+"ar": 315,
+"en": 200,
+"vaulted": true
+},
+"bp": 35000,
+"plat": 225
+},
+{
+"n": "Nova",
+"ru": "Нова",
+"aura": "Naramon",
+"pol": [
+"Madurai",
+"Madurai"
+],
+"ex": null,
+"hp": 270,
+"sh": 180,
+"ar": 105,
+"en": 175,
+"abEn": [
+"Null Star",
+"Antimatter Drop",
+"Wormhole",
+"Molecular Prime"
+],
+"ab": [
+"Звезда Пустоты",
+"Сброс Антивещества",
+"Червоточина",
+"Молекулярный Заряд"
+],
+"play": [
+"Damage",
+"Crowd Control"
+],
+"aug": [
+"Cephalon Suda",
+"Steel Meridian"
+],
+"prime": {
+"aura": "Naramon",
+"pol": [
+"Madurai",
+"Madurai",
+"Madurai"
+],
+"ex": null,
+"hp": 270,
+"sh": 270,
+"ar": 135,
+"en": 215,
+"vaulted": true
+},
+"bp": 35000,
+"plat": 375
+},
+{
+"n": "Hildryn",
+"ru": "Хильдрин",
+"aura": "Naramon",
+"pol": [
+"Vazarin",
+"Vazarin"
+],
+"ex": "Vazarin",
+"hp": 180,
+"sh": 1280,
+"ar": 315,
+"en": 0,
+"abEn": [
+"Balefire",
+"Pillage",
+"Haven",
+"Aegis Storm"
+],
+"ab": [
+"Погребальный Огонь",
+"Грабёж",
+"Укрытие",
+"Защитный Шторм"
+],
+"play": [
+"Damage",
+"Survival"
+],
+"aug": [
+"Cephalon Suda",
+"The Perrin Sequence"
+],
+"prime": {
+"aura": "Naramon",
+"pol": [
+"Vazarin",
+"Vazarin",
+"Naramon"
+],
+"ex": "Vazarin",
+"hp": 270,
+"sh": 1380,
+"ar": 315,
+"en": 0,
+"vaulted": true
+},
+"bp": null,
+"plat": 325
+},
+{
+"n": "Mirage",
+"ru": "Мираж",
+"aura": "Naramon",
+"pol": [
+"Vazarin",
+"Madurai"
+],
+"ex": null,
+"hp": 200,
+"sh": 200,
+"ar": 105,
+"en": 175,
+"abEn": [
+"Hall of Mirrors",
+"Sleight of Hand",
+"Eclipse",
+"Prism"
+],
+"ab": [
+"Зеркальная Галерея",
+"Ловкость Рук",
+"Затмение",
+"Призма"
+],
+"play": [
+"Damage"
+],
+"aug": [
+"Arbiters of Hexis",
+"Cephalon Suda"
+],
+"prime": {
+"aura": "Naramon",
+"pol": [
+"Vazarin",
+"Vazarin",
+"Naramon",
+"Madurai"
+],
+"ex": null,
+"hp": 200,
+"sh": 310,
+"ar": 185,
+"en": 175,
+"vaulted": true
+},
+"bp": 35000,
+"plat": 275
+},
+{
+"n": "Octavia",
+"ru": "Октавия",
+"aura": "Naramon",
+"pol": [
+"Naramon",
+"Naramon"
+],
+"ex": null,
+"hp": 270,
+"sh": 180,
+"ar": 160,
+"en": 175,
+"abEn": [
+"Mallet",
+"Resonator",
+"Metronome",
+"Amp"
+],
+"ab": [
+"Молот",
+"Резонатор",
+"Метроном",
+"Усилитель"
+],
+"play": [
+"Support",
+"Damage",
+"Crowd Control"
+],
+"aug": [
+"Cephalon Suda",
+"New Loka"
+],
+"prime": {
+"aura": "Naramon",
+"pol": [
+"Vazarin",
+"Naramon",
+"Naramon"
+],
+"ex": null,
+"hp": 270,
+"sh": 270,
+"ar": 160,
+"en": 215,
+"vaulted": true
+},
+"bp": null,
+"plat": 225
+},
+{
+"n": "Gara",
+"ru": "Гара",
+"aura": "Vazarin",
+"pol": [
+"Madurai",
+"Madurai"
+],
+"ex": null,
+"hp": 270,
+"sh": 270,
+"ar": 160,
+"en": 175,
+"abEn": [
+"Shattered Lash",
+"Splinter Storm",
+"Spectrorage",
+"Mass Vitrify"
+],
+"ab": [
+"Дроблёная Плеть",
+"Осколочный Шторм",
+"Спектрогнев",
+"Витрификация Материи"
+],
+"play": [
+"Damage",
+"Survival",
+"Crowd Control"
+],
+"aug": [
+"Arbiters of Hexis",
+"New Loka"
+],
+"prime": {
+"aura": "Vazarin",
+"pol": [
+"Madurai",
+"Madurai",
+"Naramon"
+],
+"ex": null,
+"hp": 345,
+"sh": 270,
+"ar": 200,
+"en": 175,
+"vaulted": true
+},
+"bp": null,
+"plat": 225
+},
+{
+"n": "Khora",
+"ru": "Кора",
+"aura": "Vazarin",
+"pol": [
+"Madurai",
+"Naramon"
+],
+"ex": "Naramon",
+"hp": 365,
+"sh": 270,
+"ar": 290,
+"en": 140,
+"abEn": [
+"Whipclaw",
+"Ensnare",
+"Venari",
+"Strangledome"
+],
+"ab": [
+"Когтехлыст",
+"Ловушка",
+"Венари",
+"Удушающий Купол"
+],
+"play": [
+"Crowd Control",
+"Damage"
+],
+"aug": [
+"Red Veil",
+"Steel Meridian"
+],
+"prime": {
+"aura": "Vazarin",
+"pol": [
+"Madurai",
+"Vazarin",
+"Naramon"
+],
+"ex": "Naramon",
+"hp": 365,
+"sh": 365,
+"ar": 345,
+"en": 175,
+"vaulted": true
+},
+"bp": 35000,
+"plat": 325
+},
+{
+"n": "Protea",
+"ru": "Протея",
+"aura": "Aura",
+"pol": [
+"Madurai",
+"Naramon"
+],
+"ex": null,
+"hp": 270,
+"sh": 455,
+"ar": 135,
+"en": 175,
+"abEn": [
+"Grenade Fan",
+"Blaze Artillery",
+"Dispensary",
+"Temporal Anchor"
+],
+"ab": [
+"Веер Взрывов",
+"Полыхающая Артиллерия",
+"Диспенсарий",
+"Временной Якорь"
+],
+"play": [
+"Damage",
+"Support"
+],
+"aug": [
+"Arbiters of Hexis",
+"The Perrin Sequence"
+],
+"prime": {
+"aura": "Aura",
+"pol": [
+"Madurai",
+"Naramon",
+"Naramon"
+],
+"ex": null,
+"hp": 270,
+"sh": 455,
+"ar": 185,
+"en": 200,
+"vaulted": true
+},
+"bp": null,
+"plat": 325
+},
+{
+"n": "Revenant",
+"ru": "Ревенант",
+"aura": "Naramon",
+"pol": [
+"Madurai",
+"Vazarin"
+],
+"ex": null,
+"hp": 270,
+"sh": 635,
+"ar": 135,
+"en": 140,
+"abEn": [
+"Enthrall",
+"Mesmer Skin",
+"Reave",
+"Danse Macabre"
+],
+"ab": [
+"Порабощение",
+"Чешуя Месмера",
+"Опустошение",
+"Пляска Смерти"
+],
+"play": [
+"Damage",
+"Survival"
+],
+"aug": [
+"Cephalon Suda",
+"The Perrin Sequence"
+],
+"prime": {
+"aura": "Naramon",
+"pol": [
+"Naramon",
+"Madurai",
+"Vazarin"
+],
+"ex": null,
+"hp": 270,
+"sh": 825,
+"ar": 135,
+"en": 175,
+"vaulted": true
+},
+"bp": null,
+"plat": 325
+},
+{
+"n": "Wisp",
+"ru": "Висп",
+"aura": "Naramon",
+"pol": [
+"Madurai",
+"Vazarin"
+],
+"ex": null,
+"hp": 270,
+"sh": 180,
+"ar": 185,
+"en": 200,
+"abEn": [
+"Reservoirs",
+"Wil-O-Wisp",
+"Breach Surge",
+"Sol Gate"
+],
+"ab": [
+"Источники",
+"Блуждающий Огонёк",
+"Всплеск Пробоя",
+"Врата Солнца"
+],
+"play": [
+"Support"
+],
+"aug": [
+"Cephalon Suda",
+"New Loka"
+],
+"prime": {
+"aura": "Naramon",
+"pol": [
+"Madurai",
+"Vazarin",
+"Naramon"
+],
+"ex": null,
+"hp": 270,
+"sh": 270,
+"ar": 210,
+"en": 200,
+"vaulted": true
+},
+"bp": null,
+"plat": 325
+},
+{
+"n": "Wukong",
+"ru": "Вуконг",
+"aura": "Madurai",
+"pol": [
+"Naramon",
+"Vazarin"
+],
+"ex": null,
+"hp": 455,
+"sh": 270,
+"ar": 265,
+"en": 130,
+"abEn": [
+"Celestial Twin",
+"Cloud Walker",
+"Defy",
+"Primal Fury"
+],
+"ab": [
+"Небесный Близнец",
+"Идущий Среди Облаков",
+"Отрицание",
+"Первобытная Ярость"
+],
+"play": [
+"Damage",
+"Survival"
+],
+"aug": [
+"Arbiters of Hexis",
+"New Loka"
+],
+"prime": {
+"aura": "Madurai",
+"pol": [
+"Naramon",
+"Vazarin",
+"Madurai"
+],
+"ex": null,
+"hp": 455,
+"sh": 345,
+"ar": 290,
+"en": 145,
+"vaulted": true
+},
+"bp": null,
+"plat": 275
+},
+{
+"n": "Ivara",
+"ru": "Ивара",
+"aura": "Naramon",
+"pol": [
+"Vazarin",
+"Naramon"
+],
+"ex": null,
+"hp": 180,
+"sh": 270,
+"ar": 105,
+"en": 215,
+"abEn": [
+"Quiver",
+"Navigator",
+"Prowl",
+"Artemis Bow"
+],
+"ab": [
+"Колчан",
+"Навигатор",
+"Обыск",
+"Лук Артемиды"
+],
+"play": [
+"Stealth"
+],
+"aug": [
+"Cephalon Suda",
+"The Perrin Sequence"
+],
+"prime": {
+"aura": "Naramon",
+"pol": [
+"Madurai",
+"Vazarin",
+"Naramon"
+],
+"ex": null,
+"hp": 180,
+"sh": 455,
+"ar": 135,
+"en": 250,
+"vaulted": true
+},
+"bp": 35000,
+"plat": 325
+},
+{
+"n": "Dante",
+"ru": "Данте",
+"aura": "Aura",
+"pol": [
+"Madurai",
+"Naramon"
+],
+"ex": null,
+"hp": 300,
+"sh": 150,
+"ar": 145,
+"en": 200,
+"abEn": [
+"Noctua",
+"Light Verse",
+"Dark Verse",
+"Final Verse"
+],
+"ab": [
+"Ноктуа",
+"Куплет Света",
+"Куплет Тьмы",
+"Последний Куплет"
+],
+"play": [
+"Damage",
+"Support",
+"Survival"
+],
+"aug": [
+"Arbiters of Hexis",
+"Cephalon Suda"
+],
+"prime": null,
+"bp": null,
+"plat": 350
+},
+{
+"n": "Kullervo",
+"ru": "Куллерво",
+"aura": "Naramon",
+"pol": [
+"Madurai",
+"Madurai"
+],
+"ex": null,
+"hp": 1005,
+"sh": 0,
+"ar": 550,
+"en": 175,
+"abEn": [
+"Wrathful Advance",
+"Recompense",
+"Collective Curse",
+"Storm of Ukko"
+],
+"ab": [
+"Неистовый Шаг",
+"Воздаяние",
+"Проклятие Рода",
+"Град Укко"
+],
+"play": [
+"Damage"
+],
+"aug": [
+"New Loka",
+"Steel Meridian"
+],
+"prime": null,
+"bp": null,
+"plat": 325
+}
+]
+}

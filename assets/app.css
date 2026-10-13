@@ -1,0 +1,334 @@
+/* Навигатор Тенно — раскладки экранов. Значения перенесены из инлайн-стилей эталонных экранов
+   design-system/previews/Screen*.html (ScreenMap, ScreenPlanet, ScreenItem, ScreenTasks, ScreenSearch, ScreenTablet, ScreenMobile*).
+   Компоненты не переопределяются: используются классы и токены bundle.css / tokens.css. */
+[hidden] { display: none !important; }
+
+/* ── Каркас ─────────────────────────────────────────────── */
+html, body { min-height: 100%; }
+body { background: var(--tn-color-bg-canvas); }
+#app { min-height: 100vh; display: flex; flex-direction: column; }
+#main { flex: 1; outline: none; }
+#app.is-map { height: 100vh; height: 100dvh; overflow: hidden; }
+#app.is-map #main { position: relative; min-height: 0; }
+.tn-noscroll { overflow: hidden; }
+.tn-overlay-root { position: fixed; inset: 0; pointer-events: none; z-index: var(--tn-z-index-drawer); min-height: 0; background: none; }
+.tn-overlay-root > * { pointer-events: auto; }
+.tn-overlay-root .tn-toasts { pointer-events: none; }
+.tn-overlay-root .tn-toasts > * { pointer-events: auto; }
+.tn-overlay-root .tn-menu { position: fixed; }
+.tn-scrim--drawer { position: fixed; inset: 0; z-index: calc(var(--tn-z-index-drawer) - 1); background: var(--tn-color-surface-scrim); display: block; padding: 0; }
+.tn-skip:focus { position: fixed !important; left: 16px; top: 8px; width: auto; height: auto; clip: auto; z-index: var(--tn-z-index-tooltip); padding: 8px 12px; background: var(--tn-color-surface-overlay); color: var(--tn-color-text-primary); border-radius: var(--tn-radius-sm); white-space: normal; }
+.tn-small { font-size: 13px; line-height: 18px; }
+.tn-linkbtn { background: none; border: 0; padding: 0; font: inherit; color: var(--tn-color-text-link); text-decoration: underline; text-underline-offset: 2px; cursor: pointer; }
+.tn-linkbtn:hover { color: var(--tn-color-text-link-hover); }
+.tn-tag--btn { cursor: pointer; font: inherit; font-size: 12px; }
+.tn-save--btn { background: none; border: 0; padding: 0; font-family: inherit; cursor: pointer; text-align: left; }
+.tn-banner__actions { margin-left: auto; display: flex; gap: var(--tn-space-2); flex-wrap: wrap; }
+.tn-section-link { font-size: 13px; text-transform: none; letter-spacing: 0; }
+.tn-h1-adapt { font-size: 32px; line-height: 40px; }
+@container tn (max-width: 639px) { .tn-h1-adapt { font-size: 26px; line-height: 32px; } }
+
+/* ── Планеты: заглушки (скрытое изображение) и кольцо текущего ── */
+.tn-orbbox { position: relative; flex: none; }
+.tn-orb--hidden { background: repeating-linear-gradient(135deg, var(--tn-color-surface-raised) 0 4px, var(--tn-color-surface-secondary) 4px 8px); box-shadow: inset 0 0 0 1px var(--tn-color-border-control); }
+.tn-ring--current { border-color: var(--tn-color-progress-current); opacity: 1; border-width: 2px; box-shadow: var(--tn-shadow-glow-accent); }
+
+/* ── Главный экран: карта (ScreenMap 1440 · ScreenTablet 1024 · ScreenMobileStates 390) ── */
+.tn-home--map { position: absolute; inset: 0; }
+.tn-home--map .tn-map { position: absolute; inset: 0; border-radius: 0; border: 0; touch-action: none; }
+.tn-map__layer { transform-origin: 0 0; transition: transform var(--tn-duration-map) var(--tn-easing-map); will-change: transform; }
+.tn-home__ctx { position: absolute; left: 24px; top: 24px; display: flex; flex-direction: column; gap: 12px; max-width: 560px; z-index: 2; }
+.tn-home__panel { padding: 16px 20px; display: flex; flex-direction: column; gap: 12px; background: color-mix(in srgb, var(--tn-color-surface-primary) 94%, transparent); }
+.tn-home__tools { position: absolute; left: 16px; top: 16px; z-index: 2; display: none; gap: var(--tn-space-2); align-items: center; }
+.tn-home__legend { bottom: 24px; left: 24px; grid-template-columns: repeat(3, auto); max-width: none; z-index: 2; }
+.tn-home__zoom { position: absolute; right: 24px; bottom: 24px; z-index: 2; }
+.tn-home:has(.tn-home__objpanel) .tn-home__zoom { right: 448px; }
+.tn-home__objpanel { position: absolute; right: 24px; top: 24px; bottom: 24px; z-index: 3; }
+.tn-first { max-width: 560px; }
+@container tn (max-width: 1099px) {
+  .tn-home__ctx { display: none; }
+  .tn-home__ctx:has(.tn-first) { display: flex; left: 16px; top: 72px; right: 16px; }
+  .tn-home__tools { display: flex; }
+  .tn-home__legend { left: 16px; bottom: 76px; grid-template-columns: 1fr; }
+  .tn-home__zoom { right: auto; left: 16px; bottom: 16px; flex-direction: row; }
+  .tn-home__objpanel { right: 0; top: 0; bottom: 0; border-radius: 0; border-width: 0 0 0 1px; width: 380px; }
+}
+@container tn (max-width: 639px) {
+  .tn-home__tools { left: 12px; top: 12px; right: 12px; }
+  .tn-home__tools > .tn-btn { margin-left: auto; }
+  .tn-home__zoom { left: auto; right: 12px; top: 72px; bottom: auto; flex-direction: column; }
+  .tn-home__legend { left: 12px; right: 12px; bottom: 12px; }
+  .tn-home__ctx:has(.tn-first) { top: 64px; left: 12px; right: 12px; }
+}
+
+/* ── Маршрут списком (RouteList · ScreenMobile) ── */
+.tn-home--list { padding-top: 24px; padding-bottom: 64px; }
+.tn-routepage { max-width: 760px; display: flex; flex-direction: column; gap: var(--tn-space-6); }
+.tn-routepage__head { gap: var(--tn-space-4); }
+.tn-first-list { max-width: 520px; margin: 0 auto; }
+@container tn (max-width: 639px) { .tn-home--list { padding-top: 16px; } }
+
+/* ── Выбор этапа (ScreenMobileStates: первый визит) ── */
+.tn-stagepick { gap: var(--tn-space-4); }
+.tn-stagepick__group { display: flex; flex-direction: column; gap: var(--tn-space-2); }
+.tn-pickopt { border: 1px solid var(--tn-color-border-subtle); border-radius: 6px; padding: 10px 12px; }
+.tn-pickopt.is-on { border-color: var(--tn-color-border-accent); background: var(--tn-color-surface-selected); }
+.tn-pickopt input { border-radius: 50%; }
+
+/* ── Страницы ── */
+.tn-page { padding-top: 20px; }
+.tn-crumbrow { justify-content: space-between; }
+.tn-backlink { margin-left: auto; white-space: normal; text-align: left; }
+.tn-pagetitle--media { grid-template-columns: auto 1fr auto; column-gap: 24px; }
+.tn-pagetitle--media .tn-pt-media { grid-row: 1 / span 5; align-self: start; }
+.tn-pagetitle--media .tn-pt-col { grid-column: 2; }
+.tn-pagetitle--media h1 { grid-column: 2; }
+.tn-pagetitle--media .tn-pt-actions { grid-column: 3; grid-row: 1 / span 5; }
+@container tn (max-width: 639px) {
+  .tn-pagetitle--media { grid-template-columns: auto 1fr; column-gap: 12px; }
+  .tn-pagetitle--media .tn-pt-media { grid-row: 1 / span 2; zoom: .5; }
+  .tn-pagetitle--media .tn-pt-col, .tn-pagetitle--media h1 { grid-column: 2; }
+  .tn-pagetitle--media .tn-pagetitle__lead, .tn-pagetitle--media .tn-markers, .tn-pagetitle--media .tn-cluster.tn-pt-col { grid-column: 1 / -1; }
+  .tn-pagetitle--media .tn-pt-actions { grid-column: 1 / -1; grid-row: auto; }
+  .tn-pagetitle--media h1 { hyphens: auto; }
+}
+/* три колонки: оглавление 240 · статья · правая 300 (ScreenPlanet) */
+.tn-layout3 { display: grid; grid-template-columns: 240px minmax(0, 1fr) 300px; gap: 40px; padding: 32px 0 64px; }
+.tn-layout3 > .tn-toc--wide { top: 88px; align-self: start; }
+.tn-toc--compact { display: none; }
+.tn-aside { position: sticky; top: 88px; align-self: start; }
+.tn-article { min-width: 0; }
+@container tn (max-width: 1359px) {
+  .tn-layout3 { grid-template-columns: 240px minmax(0, 1fr); }
+  .tn-layout3 > .tn-aside { position: static; grid-column: 2; grid-row: 1; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  .tn-layout3 > .tn-toc--wide { grid-row: 1 / span 2; }
+  .tn-layout3 > .tn-article { grid-column: 2; }
+}
+@container tn (max-width: 1099px) {
+  .tn-layout3 { grid-template-columns: minmax(0, 1fr); gap: 24px; padding-top: 24px; }
+  .tn-layout3 > .tn-toc--wide { display: none; }
+  .tn-layout3 > .tn-toc--compact { display: block; position: static; }
+  .tn-layout3 > .tn-aside, .tn-layout3 > .tn-article { grid-column: 1; grid-row: auto; }
+  .tn-layout3 > .tn-aside { order: 3; }
+}
+.tn-toc--compact details[open] ol { margin-top: var(--tn-space-2); }
+/* две колонки: содержимое · 360 (ScreenItem), задачи · 340 (ScreenTasks) */
+.tn-layout2 { display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 40px; padding: 32px 0 64px; }
+.tn-layout2--tasks { grid-template-columns: minmax(0, 1fr) 340px; }
+@container tn (max-width: 1099px) { .tn-layout2, .tn-layout2--tasks { grid-template-columns: minmax(0, 1fr); gap: 24px; } .tn-aside { position: static; } }
+.tn-narrow { max-width: 1040px; }
+.tn-narrowcol { max-width: 900px; }
+.tn-grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.tn-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@container tn (max-width: 1099px) { .tn-grid--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@container tn (max-width: 639px) { .tn-grid--2, .tn-grid--3 { grid-template-columns: minmax(0, 1fr); } }
+.tn-props--panel { padding: 8px 20px; }
+
+/* ── Статьи гайда ── */
+.tn-prose > p, .tn-prose-list { max-width: var(--tn-size-reading); }
+.tn-prose-list { padding-left: 20px; display: flex; flex-direction: column; gap: var(--tn-space-2); }
+.tn-figure { display: flex; gap: var(--tn-space-2); align-items: flex-start; }
+.tn-toolink { display: flex; align-items: center; gap: var(--tn-space-3); min-height: var(--tn-size-target-min); padding: var(--tn-space-2) var(--tn-space-3); border: 1px solid var(--tn-color-border-subtle); border-radius: var(--tn-radius-sm); color: var(--tn-color-text-primary); text-decoration: none; }
+.tn-toolink:hover { background: var(--tn-color-surface-raised); border-color: var(--tn-color-border-strong); }
+.tn-toolink > span { flex: 1; }
+.tn-results--grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 40px; }
+@container tn (max-width: 639px) { .tn-results--grid { grid-template-columns: minmax(0, 1fr); } }
+.tn-artlink .tn-result__title { font-size: 16px; }
+
+/* ── Цели ── */
+.tn-goal__details { display: flex; flex-direction: column; gap: var(--tn-space-4); }
+.tn-goal__result, .tn-goal__next { font-size: 14px; line-height: 20px; color: var(--tn-color-text-secondary); }
+.tn-goal__next { display: flex; align-items: center; gap: var(--tn-space-2); }
+.tn-side .tn-card { border-style: dashed; }
+.tn-side > h3 { margin-top: var(--tn-space-4); }
+.tn-card__foot { flex-wrap: wrap; }
+
+/* ── Каталог с фильтрами (Filters) ── */
+.tn-catalog { display: grid; grid-template-columns: 264px minmax(0, 1fr); gap: 32px; align-items: start; }
+.tn-catalog__fbtn { display: none; }
+@container tn (max-width: 1099px) { .tn-catalog { grid-template-columns: minmax(0, 1fr); } .tn-catalog__side { display: none; } .tn-catalog__fbtn { display: inline-flex; } }
+
+/* ── Поиск (ScreenSearch) ── */
+.tn-searchpage { max-width: 1040px; }
+.tn-searchgrid { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 40px; padding: 16px 0 64px; }
+@container tn (max-width: 1099px) { .tn-searchgrid { grid-template-columns: minmax(0, 1fr); } }
+.tn-search__panel { min-height: 240px; }
+
+/* ── Сборка ── */
+.tn-slotdetail { gap: var(--tn-space-3); }
+.tn-rankstep { flex-direction: row; align-items: center; }
+.tn-rankstep .tn-mapctl__zoom { padding: 0 var(--tn-space-3); align-self: stretch; display: grid; place-items: center; }
+.tn-build .tn-section-title .tn-switch { max-width: 320px; }
+
+/* ── Задачи и отметки ── */
+.tn-factrow { display: flex; align-items: center; justify-content: space-between; gap: var(--tn-space-3); padding: 6px 0; border-bottom: 1px solid var(--tn-color-border-subtle); }
+.tn-factrow:last-child { border-bottom: 0; }
+.tn-factgroup { border-top: 1px solid var(--tn-color-border-subtle); }
+.tn-factgroup > summary { list-style: none; display: flex; align-items: center; gap: var(--tn-space-3); min-height: var(--tn-size-target-min); padding: 8px 0; cursor: pointer; border-radius: var(--tn-radius-sm); }
+.tn-factgroup > summary::-webkit-details-marker { display: none; }
+.tn-factgroup > summary > .tn-faint { margin-left: auto; }
+.tn-factgroup > summary:hover .tn-text-body-strong { color: var(--tn-color-text-accent); }
+.tn-factgroup__chev { transition: transform var(--tn-duration-fast); color: var(--tn-color-text-tertiary); }
+.tn-factgroup[open] .tn-factgroup__chev { transform: rotate(180deg); }
+.tn-factlist { padding-bottom: 8px; }
+.tn-segmented--sm button { min-height: 36px; padding: 0 var(--tn-space-3); }
+.tn-input--num { max-width: 180px; font-family: var(--tn-font-mono); }
+.tn-relations { display: flex; flex-direction: column; gap: 2px; }
+.tn-emblem--lg { width: 72px; height: 72px; font-size: 22px; }
+.tn-synd .tn-standing { margin-top: var(--tn-space-1); }
+
+/* ── Тосты на телефоне — над нижней панелью ── */
+@media (max-width: 639px) { .tn-overlay-root .tn-toasts { left: 16px; right: 16px; bottom: calc(var(--tn-size-tabbar) + 8px + env(safe-area-inset-bottom)); } .tn-overlay-root .tn-toast { width: 100%; } }
+@media (prefers-reduced-motion: reduce) { .tn-map__layer { transition: none !important; } }
+.tn-static-map .tn-map__layer { transition: none; }
+
+/* Встроенная кнопка очистки браузера дублирует кнопку DS */
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration { -webkit-appearance: none; appearance: none; display: none; }
+/* Обёртки шапки и нижней панели: липкость DS (.tn-header / .tn-tabbar) действует относительно родителя,
+   поэтому липкими делаем сами контейнеры-обёртки */
+#tn-header { position: sticky; top: 0; z-index: var(--tn-z-index-header); }
+#tn-tabbar { position: sticky; bottom: 0; z-index: var(--tn-z-index-header); }
+
+.tn-source__name button { text-align: left; }
+@container tn (max-width: 639px) {
+  .tn-source { grid-template-columns: 40px minmax(0, 1fr) auto; align-items: start; }
+  .tn-source > div { grid-column: 2 / -1; }
+  .tn-source__chance { grid-column: 2; grid-row: 2; text-align: left; }
+  .tn-source > :last-child:not(div) { grid-column: 3; grid-row: 2; align-self: center; }
+}
+
+/* Программный фокус на заголовке (для экранных дикторов) — без рамки; клавиатурный фокус остаётся у элементов управления */
+h1[tabindex="-1"]:focus, h2[tabindex="-1"]:focus, h3[tabindex="-1"]:focus { outline: none; }
+@container tn (max-width: 639px) { .tn-build > .tn-section-title { flex-wrap: wrap; row-gap: 12px; } }
+
+/* =====================================================================
+   ЗВЁЗДНАЯ КАРТА В СТИЛЕ ИГРОВОЙ НАВИГАЦИИ
+   Солнце в центре, наклонённые эллиптические орбиты и лучи, туманность,
+   планеты разного размера с подписями заглавными. Состояния (пройдено,
+   текущий этап, закрыто, выбор, спойлеры) — из дизайн-системы.
+   ===================================================================== */
+.tn-home--map .tn-map {
+  background:
+    radial-gradient(ellipse 34% 30% at 50% 50%, rgba(255, 168, 92, .10), transparent 70%),
+    linear-gradient(180deg, #0a1820 0%, #07121a 55%, #09151b 100%);
+}
+.tn-map__nebula { position: absolute; inset: -8%; z-index: -2; pointer-events: none; filter: blur(28px); opacity: .95;
+  background:
+    radial-gradient(ellipse 26% 22% at 18% 28%, rgba(38, 112, 128, .30), transparent 70%),
+    radial-gradient(ellipse 30% 24% at 30% 72%, rgba(24, 70, 96, .32), transparent 70%),
+    radial-gradient(ellipse 28% 26% at 82% 24%, rgba(36, 96, 120, .26), transparent 70%),
+    radial-gradient(ellipse 32% 28% at 78% 78%, rgba(30, 86, 110, .30), transparent 70%),
+    radial-gradient(ellipse 22% 18% at 56% 16%, rgba(90, 120, 130, .14), transparent 70%),
+    radial-gradient(ellipse 18% 14% at 44% 86%, rgba(110, 90, 70, .12), transparent 70%); }
+.tn-map__svg * { vector-effect: non-scaling-stroke; }
+.tn-navgrid__spoke { stroke: rgba(170, 205, 220, .045); stroke-width: 1; }
+.tn-navgrid__orbit { stroke: rgba(170, 205, 220, .11); stroke-opacity: 1; }
+.tn-navgrid__orbit--dash { stroke-dasharray: 2 5; stroke: rgba(170, 205, 220, .14); }
+
+.tn-map__sun { position: absolute; width: calc(160px * var(--k, 1)); aspect-ratio: 1; transform: translate(-50%, -50%); border-radius: 50%; pointer-events: none;
+  background: radial-gradient(circle, #fff7e4 0%, #ffd896 7%, rgba(255, 168, 80, .62) 17%, rgba(255, 136, 56, .22) 36%, rgba(255, 120, 50, .06) 55%, transparent 70%); }
+.tn-map__sun::before, .tn-map__sun::after { content: ""; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border-radius: 50%; }
+.tn-map__sun::after { width: calc(460px * var(--k, 1)); height: 3px; filter: blur(1.2px);
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 196, 130, .35) 30%, #fff1d6 50%, rgba(255, 196, 130, .35) 70%, transparent 100%); }
+.tn-map__sun::before { width: calc(220px * var(--k, 1)); height: calc(14px * var(--k, 1)); filter: blur(6px);
+  background: radial-gradient(ellipse, rgba(255, 190, 120, .45), transparent 70%); }
+@media (prefers-reduced-motion: no-preference) {
+  .tn-home--map:not(.tn-static-map) .tn-map__sun { animation: tn-sun-breath 6s ease-in-out infinite; }
+}
+@keyframes tn-sun-breath { 50% { filter: brightness(1.12); } }
+.tn-static-map .tn-map__sun { animation: none; }
+
+.tn-planet--nav { --_px: 30px; --_size: calc(var(--_px) * var(--k, 1)); gap: 3px; padding: 4px 6px;
+  transform: translate(-50%, calc(-1 * (4px + 15px + 3px + var(--_size) / 2))); }
+.tn-planet--nav[data-size="xl"] { --_px: 72px; }
+.tn-planet--nav[data-size="lg"] { --_px: 48px; }
+.tn-planet--nav[data-size="md"] { --_px: 38px; }
+.tn-planet--nav[data-size="sm"] { --_px: 30px; }
+.tn-planet--nav[data-size="xs"] { --_px: 20px; }
+.tn-planet--nav .tn-planet__name { font-family: var(--tn-font-display); font-size: 12px; line-height: 15px; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; white-space: nowrap;
+  color: #edf2f5; text-shadow: 0 0 2px #000, 0 0 8px rgba(0, 0, 0, .9); }
+.tn-planet--nav .tn-planet__meta { font-size: 11px; line-height: 14px; letter-spacing: .02em; color: var(--tn-color-text-secondary); text-shadow: 0 0 2px #000, 0 0 6px rgba(0, 0, 0, .9); }
+.tn-planet--nav .tn-orb { box-shadow: inset calc(-6px * var(--k, 1)) calc(-8px * var(--k, 1)) calc(14px * var(--k, 1)) rgba(0, 0, 0, .6), 0 0 calc(14px * var(--k, 1)) rgba(150, 200, 230, .10); }
+.tn-planet--nav .tn-planet__ring { inset: -4px; }
+.tn-planet--nav[data-size="sm"] .tn-planet__badge, .tn-planet--nav[data-size="xs"] .tn-planet__badge { width: 16px; height: 16px; right: -7px; bottom: -7px; }
+.tn-planet--nav[data-size="sm"] .tn-planet__badge .tn-icon, .tn-planet--nav[data-size="xs"] .tn-planet__badge .tn-icon { width: 10px; height: 10px; }
+.tn-planet--nav[data-progress="locked"] .tn-orb { filter: grayscale(.8) brightness(.6); }
+.tn-planet--nav[data-progress="locked"] .tn-planet__name { color: #a9b4bb; }
+.tn-planet--nav[data-spoiler="hidden"] .tn-planet__name { font-family: var(--tn-font-display); font-weight: 500; color: #8f9aa1; }
+.tn-planet--nav:hover .tn-planet__name, .tn-planet--nav[aria-pressed="true"] .tn-planet__name { color: var(--tn-color-text-accent); }
+.tn-planet--nav[aria-pressed="true"]::before, .tn-planet--nav[aria-pressed="true"]::after { top: calc(4px + 15px + 3px - 8px); }
+.tn-planet--nav[data-progress="current"] .tn-planet__name { color: var(--tn-color-text-accent); }
+
+/* Линии маршрута без шума: фоновые связи (неактивные и «возвращение») видны только у выбранной планеты,
+   пройденный путь — тонкий и приглушённый, предстоящие шаги — яркие и со стрелками */
+.tn-map--nav .tn-edge--inactive:not(.is-linked), .tn-map--nav .tn-edge--return:not(.is-linked) { display: none; }
+.tn-map--nav .tn-edge--done { stroke-width: 1.25; stroke-opacity: .42; }
+.tn-map--nav .tn-edge--done.is-linked { stroke-opacity: .85; }
+.tn-map--nav .tn-edge--inactive.is-linked { stroke: rgba(190, 215, 225, .55); stroke-dasharray: 2 4; }
+.tn-map--nav .tn-edge--required { stroke-width: 1.75; }
+.tn-map--nav .tn-edge.is-dimmed { stroke-opacity: .18; }
+.tn-map--nav .tn-edge--done.is-dimmed { stroke-opacity: .14; }
+
+/* Полярности (значок — глиф полярности в рамке; состояние слота: совпадает / не совпадает) */
+.tn-pol { display: inline-grid; place-items: center; min-width: 18px; height: 18px; padding: 0 3px; border-radius: 4px; border: 1px solid var(--tn-color-border-control); font-family: var(--tn-font-mono); font-size: 11px; line-height: 1; font-weight: 600; color: var(--tn-color-text-secondary); vertical-align: middle; margin-left: 4px; text-transform: none; letter-spacing: 0; }
+.tn-pol--none { border-style: dashed; opacity: .55; }
+.tn-pol--match { border-color: var(--tn-color-status-success); color: var(--tn-color-status-success); }
+.tn-pol--mismatch { border-color: var(--tn-color-status-warning); color: var(--tn-color-status-warning); }
+.tn-pol--mod { border-color: transparent; background: var(--tn-color-surface-inset); color: var(--tn-color-text-tertiary); }
+.tn-pollist .tn-pol:first-child { margin-left: 0; }
+.tn-slot__label .tn-pol--mod { margin-left: 2px; }
+.tn-drain--match { color: var(--tn-color-status-success); }
+.tn-drain--mismatch { color: var(--tn-color-status-warning); }
+.tn-slot--off { opacity: .6; border-style: dashed; }
+.tn-polblock .tn-section-title { flex-wrap: wrap; row-gap: 12px; }
+
+/* Арсенал: вкладки-ссылки и сегменты-ссылки (вид как у DS .tn-tab / .tn-segmented button) */
+a.tn-tab--link { text-decoration: none; color: var(--tn-color-text-secondary); }
+a.tn-tab--link:hover { color: var(--tn-color-text-primary); }
+a.tn-tab--link[aria-current="page"] { color: var(--tn-color-text-primary); }
+a.tn-tab--link[aria-current="page"]::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: var(--tn-border-width-thick); background: var(--tn-color-accent-primary); }
+a.tn-tab--link[aria-current="page"] .tn-count { background: var(--tn-color-accent-subtle); color: var(--tn-color-text-accent); }
+.tn-segmented__link { display: inline-flex; align-items: center; gap: var(--tn-space-2); min-height: 40px; padding: 0 var(--tn-space-3); border-radius: 3px; color: var(--tn-color-text-secondary); font-size: 14px; font-weight: 500; text-decoration: none; }
+.tn-segmented__link:hover { color: var(--tn-color-text-primary); }
+.tn-segmented__link[aria-current="page"] { background: var(--tn-color-surface-selected); color: var(--tn-color-text-primary); box-shadow: inset 0 0 0 1px var(--tn-color-border-accent); }
+.tn-arsenal-switch { padding-top: 24px; }
+.tn-arscard .tn-card__head { align-items: center; }
+.tn-arscard .tn-thumb { width: 48px; height: 48px; flex: none; }
+.tn-arsfacts { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; margin: 0; font-size: 13px; line-height: 18px; }
+.tn-arsfacts dt { color: var(--tn-color-text-tertiary); }
+.tn-arsfacts dd { margin: 0; }
+@container tn (max-width: 639px) { .tn-tabbar { grid-template-columns: repeat(5, 1fr); } .tn-tabbar__item { font-size: 11px; } }
+
+/* Шапка на средних ширинах: шесть разделов + поиск должны помещаться в одну строку.
+   ≤1439 — без значков у разделов; ≤1099 — краткие подписи; ≤939 — «Варфреймы» и «Оружие» сводятся в «Арсенал»;
+   ≤819 — от названия сайта остаётся знак (название остаётся для экранных дикторов). */
+.tn-nav__short, .tn-nav__item--narrow { display: none; }
+@container tn (max-width: 1439px) {
+  .tn-header { gap: var(--tn-space-4); }
+  .tn-nav__item > .tn-icon:first-child { display: none; }
+  .tn-nav__item { padding: 0 var(--tn-space-2); }
+  .tn-nav__item[aria-current="page"]::after { left: var(--tn-space-2); right: var(--tn-space-2); }
+}
+@container tn (max-width: 1099px) {
+  .tn-nav__full { display: none; }
+  .tn-nav__short { display: inline; }
+  .tn-brand { white-space: nowrap; }
+}
+@container tn (max-width: 939px) {
+  .tn-nav__item--wide { display: none; }
+  .tn-nav__item--narrow { display: inline-flex; }
+}
+@container tn (max-width: 819px) {
+  .tn-brand__text { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+}
+@container tn (max-width: 719px) {
+  .tn-header { padding: 0 var(--tn-space-3); gap: var(--tn-space-2); }
+  .tn-nav { gap: 0; }
+  .tn-nav__item { padding: 0 6px; }
+  .tn-nav__item[aria-current="page"]::after { left: 6px; right: 6px; }
+}
+/* Заголовок страницы на средне-узких ширинах (640–899): кнопки действий уходят под заголовок, как на телефоне */
+@container tn (max-width: 899px) {
+  .tn-pagetitle { grid-template-columns: minmax(0, 1fr); }
+  .tn-pagetitle__actions { grid-column: 1; grid-row: auto; flex-wrap: wrap; }
+}
